@@ -1,6 +1,4 @@
 
-
-<!-- copy from homejsp css -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
@@ -8,440 +6,49 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>admin Page</title>
-<link href="<c:url value="/resources/css/bootstrap.min.css" />"
-	rel="stylesheet">
-<script src="<c:url value="/resources/js/jquery-1.11.1.min.js" />"></script>
-<script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
 
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery/min.js"></script>
+
+
+	
 <meta charset="utf-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Bootstrap CSS -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-	crossorigin="anonymous">
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-	crossorigin="anonymous"></script>
-<style>
-* {
-	margin: 0px;
-	padding: 0px;
+
+	
+	
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	
+	<style>
+.navbar-default{
+
+background-color: #00B7E3! important;
+    height: 85px! important;
+    color: black! important;
+    padding-top: 16px! important;
+
 }
 
-#basic {
-	width: 100%;
-	height: 30px;
-	background-color: #00ABEA;
-	margin: 0px;
-	padding: 0px;
-	font-size: 18px;
-	letter-spacing: 1px;
-	font-weight: bold;
-	text-align: center;
-	color: white;
+.mm{
+background-color: MediumSeaGreen;
+margin-top:0px;
+
 }
 
-#basic-info {
-	width: 100%;
-	height: 35px;
-	background-color: #00ABEA;
-	margin: 0px;
-	padding: 0px;
-	font-size: 18px;
-	letter-spacing: 1px;
-	font-weight: bold;
-	text-align: center;
-	color: white;
-}
 
-#PropertyDetails {
-	width: 100%;
-	height: 30px;
-	background-color: #00ABEA;
-	margin: 0px;
-	padding: 0px;
-	font-size: 18px;
-	letter-spacing: 1px;
-	font-weight: bold;
-	text-align: center;
-	color: white;
-}
 
-#possession {
-	width: 100%;
-	height: 30px;
-	background-color: #00ABEA;
-	margin: 0px;
-	padding: 0px;
-	font-size: 18px;
-	letter-spacing: 1px;
-	font-weight: bold;
-	text-align: center;
-	color: white;
-}
-
-#aboutProperty {
-	width: 100%;
-	height: 30px;
-	background-color: #00ABEA;
-	margin: 0px;
-	padding: 0px;
-	font-size: 18px;
-	letter-spacing: 1px;
-	font-weight: bold;
-	text-align: center;
-	color: white;
-}
-
-#propertyDescription {
-	width: 100%;
-	height: 30px;
-	background-color: #00ABEA;
-	margin: 0px;
-	padding: 0px;
-	font-size: 18px;
-	letter-spacing: 1px;
-	font-weight: bold;
-	text-align: center;
-	color: white;
-}
-
-.rowHeightButton {
-	height: 50px;
-	/* background-color:yellow; */
-}
-
-* {
-	box-sizing: border-box;
-}
-
-input[type=text] {
-	width: 100%;
-	padding: 5px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	resize: vertical;
-	font-size: 14px;
-}
-
-label {
-	padding: 5px 5px 5px 0;
-	display: inline-block;
-	margin-left: 10px;
-	font-size: 13px;
-	font-weight: bold;
-	text-align: right;
-	/*  background-color: red; */
-}
-
-input[type=submit] {
-	background-color: #4CAF50;
-	color: white;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-	float: right;
-}
-
-input[type=submit]:hover {
-	background-color: #45a049;
-}
-
-.container {
-	border-radius: 5px;
-	background-color: #f2f2f2;
-	padding: 3px;
-}
-
-#col-15 {
-	float: left;
-	width: 8%;
-	margin-top: 6px;
-	/*  background-color: yellow; */
-	text-align: right;
-}
-
-.butheight {
-	/*  background-color:blue; */
-	height: 40px;
-	padding-top: 20px;
-}
-
-#propertyDescription {
-	width: 100%;
-	height: 30px;
-	background-color: #00ABEA;
-	margin: 0px;
-	padding: 0px;
-	font-size: 18px;
-	letter-spacing: 1px;
-	font-weight: bold;
-	text-align: center;
-	color: white;
-}
-
-#col-30 {
-	float: left;
-	width: 200px;
-	margin-top: 6px;
-	text-align: left;
-}
-
-.field {
-	width: 200px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	font-size: 14px;
-	height: 32px;
-}
-/* Clear floats after the columns */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-	.col-25, .col-75, input[type=submit] {
-		width: 100%;
-		margin-top: 0;
-	}
-}
-
-.rw {
-	padding: 20px;
-}
-
-.imag {
-	max-width: 180px;
-}
-
-.blue {
-	background-color: blue;
-	height: 5vh;
-	weight: 100%;
-	text-align: center;
-}
-
-.grey {
-	background-color: blue;
-	height: 5vh;
-	weight: 40%;
-	margin-left: 50px;
-}
-
-.re {
-	padding: 20px;
-}
-
-.green {
-	background-color: blue;
-	height: 5vh;
-	margin-left: 50px;
-}
-
-.we {
-	padding: 20px;
-}
-
-.blur {
-	background-color: blue;
-	height: 5vh;
-	margin-left: 60px;
-}
-
-.th {
-	padding: 20px;
-}
-
-input[type=file] {
-	padding: 0px;
-	background: #2d2d2d;
-}
-
-.rowHeight {
-	height: 25px;
-	background-color: #000;
-}
-
-.fbtn1 {
-	float: right;
-	margin-right: 10px;
-	font-size: 14px;
-	font-weight: bold;
-	line-height: -30px;
-}
-
-.active, .btn:hover {
-	background-color: green;
-	color: white;
-}
-
-.hero {
-	background: #6abaf1;
-	height: 20vh;
-}
-
-.mera {
-	text-align: center;
-	padding-top: 60px;
-	text-style: bold;
-}
-
-.footer {
-	background-color: black;
-	width: 100%;
-}
-
-* {
-	box-sizing: border-box;
-}
-
-.con {
-	background-color: #F1F3F4;
-}
-
-body {
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.header {
-	overflow: hidden;
-	background-color: #00B7E3;
-	padding: 20px 10px;
-	width: 2300px;
-	height:110px;
-}
-
-.header a {
-	float: left;
-	color: #fff;
-	text-align: center;
-	padding: 12px;
-	text-decoration: none;
-	font-size: 18px;
-	line-height: 25px;
-	border-radius: 4px;
-}
-
-.header a.logo {
-	font-size: 25px;
-	font-weight: bold;
-}
-
-.header a:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-.header a.active {
-	background-color: dodgerblue;
-	color: white;
-}
-
-.header-right {
-	float: right;
-}
-
-@media screen and (max-width: 500px) {
-	.header a {
-		float: none;
-		display: block;
-		text-align: left;
-	}
-	.header-right {
-		float: none;
-	}
-}
-
-/* new style added */
-
-/* Style the container */
-.container {
-	border-radius: 5px;
-	background-color: #f2f2f2;
-	padding: 20px;
-}
-
-/* Floating column for labels: 25% width */
-#col-25 {
-	float: left;
-	width: 25%;
-	margin-top: 6px;
-}
-
-/* Floating column for inputs: 75% width */
-#col-75 {
-	float: left;
-	width: 25%;
-	margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-	#col-25, #col-75, input[type=submit] {
-		width: 100%;
-		margin-top: 0;
-	}
-}
-
-@media screen and (min-width: 300px) {
-	#col-25, #col-75, input[type=submit] {
-		width: 100%;
-		margin-top: 0;
-	}
-}
-#sh{
-  position: absolute;
- 
-  height: 80px;
-  background-color: ;
-  z-index: 5;
-  top: 100px;
-  left: 600px;
-  padding-top:30px;
-}
 </style>
+	
+
 <link rel="shortcut icon" type="image/x-icon"
 	href="<c:url value="/resources/rk_images/favicon.ico" />" />
-</head>
-
-<!-- copy from homejsp css -->
-
-<body>
-<div id="sh">
 	
-       <form:form action="modify" modelAttribute="store90">
-
-				<label>Id</label>
-
-				<form:input type="text" path="id" style="width:100px;" />
-
-
-				<input type="submit" value="Modify" style="width:100px; margin-left: 10px; padding: 5px 15px;" >
-
-			</form:form>
-
-</div>
-
-	<script>
+	
+	
+	
+		<script>
 
 function doFunction(){
 	
@@ -452,9 +59,26 @@ function doFunction(){
         type: "GET",
         url: "hold",
         success: function(response){
+        	
+        	$('#personDataTableCotainer').css("display","block");
+        	
+        	$('#searchTable').css("display","none");
+        	
+        	$('#DateTable').css("display","none");
+        	
+        	$('#adminform').css("display","none");
+        
+           	$('#serviceProvidermainCotainer').css("display","none");
+           	$('#adminform').css("display","none");
+           	
+           	
+           	
         	json= JSON.parse(response);
-        	console.log(json)
-        	for (var i=0; i<json.length; i++) {
+        	
+        	
+        	
+         	for (var i=0; i<json.length; i++) {
+        		
    console.log("JSON Data: " + json[i].id);
    s+='Date of visit'+json[i].dateOfVisit+'Time'+json[i].time+'Location'+json[i].location+'Division'+json[i].division+'Name'+json[i].name+'Address'+
    json[i].address+'Mobile'+json[i].mobile+'LandlineNumber'+json[i].landlineNumber+'ServiceInterested'+json[i].serviceInterested+'CustomerSignTaken'+
@@ -462,14 +86,52 @@ function doFunction(){
    'Calender'+json[i].calender+'Longitude'+json[i].longitude+'latitude'+json[i].latitude
    
        
-}
-        	document.getElementById('result1').innerHTML=s;// Here, Result is Storing in div
+} 
+          	drawTable(json);
+	console.log("house hold---"+json)
+
+
+
+        //	document.getElementById('result1').innerHTML=s;// Here, Result is Storing in div
         }
         });
 	
+	function drawTable(data) {
+	    for (var i = 0; i < data.length; i++) {
+	        drawRow(data[i]);		
+	    }
+	}
+
+	function drawRow(rowData) {
+		
 	
-	 
+	    var row = $("<tr />")
+	    
+					
+	    $("#personDataTable").append(row);  //this will append tr element to table... keep its reference for a while since we will add cels into it
+	    row.append($("<td>" + rowData.dateOfVisit + "</td>"));
+	    row.append($("<td>" + rowData.time + "</td>"));
+
+	    row.append($("<td>" + rowData.location + "</td>"));
+	    row.append($("<td>" + rowData.name + "</td>"));
+	    row.append($("<td>" + rowData.address + "</td>"));
+	    row.append($("<td>" + rowData.mobile + "</td>"));
+	    row.append($("<td>" + rowData.landlineNumber + "</td>"));
+	    row.append($("<td>" + rowData.serviceInterested + "</td>"));
+	    row.append($("<td>" + rowData.customerSignTaken + "</td>"));
+	    row.append($("<td>" + rowData.executiveName + "</td>"));
+	    row.append($("<td>" + rowData.fieldReport + "</td>"));
+	    row.append($("<td>" + rowData.serviceDescription + "</td>"));
+	    row.append($("<td>" + rowData.calender + "</td>"));
+	    row.append($("<td>" + rowData.longitude + "</td>"));
+	    row.append($("<td>" + rowData.latitude + "</td>"));
+	    row.append($("<td>" + rowData.division + "</td>"));
+	    
+	   
+	} 
+	  
 }
+
 
 function myFunction(){
 	
@@ -483,7 +145,16 @@ function myFunction(){
 	    
 	   
 	    success: function(response){
-	    //response from controller
+            $('#personDataTableCotainer').css("display","none");
+            
+            $('#adminform').css("display","none");
+            
+            $('#DateTable').css("display","none");
+        	
+         	$('#searchTable').css("display","none");
+         	
+        	$('#serviceProvidermainCotainer').css("display","block");
+        	
 	    json=JSON.parse(response);
 	    console.log(json)
 	    for (var i=0; i<json.length; i++) {
@@ -495,222 +166,497 @@ function myFunction(){
 	    	   
 	    	       
 	    	}
-	    	        	document.getElementById('result2').innerHTML=s;// Here, Result is Storing in div
-	    	        
+	    	        	/* document.getElementById('result2').innerHTML=s;// Here, Result is Storing in div */
+	    drawTable(json);      
 	    
 	    }
 	});
-}
+		
+		function drawTable(data) {
+		    for (var i = 0; i < data.length; i++) {
+		        drawRow(data[i]);
+		    }
+		}
+
+		function drawRow(rowData) {
+		    var row = $("<tr />")
+		    $("#serviceProvider").append(row); //this will append tr element to table... keep its reference for a while since we will add cels into it
+		    row.append($("<td>" + rowData.dateOfVisit + "</td>"));
+		    row.append($("<td>" + rowData.time + "</td>"));
+
+		    row.append($("<td>" + rowData.location + "</td>"));
+		    row.append($("<td>" + rowData.name + "</td>"));
+		    row.append($("<td>" + rowData.address + "</td>"));
+		    row.append($("<td>" + rowData.mobile + "</td>"));
+		    row.append($("<td>" + rowData.landlineNumber + "</td>"));
+		    row.append($("<td>" + rowData.firmName + "</td>"));
+		    row.append($("<td>" + rowData.firmRegno + "</td>"));
+		    row.append($("<td>" + rowData.workExp + "</td>"));
+		    row.append($("<td>" + rowData.serviceInterested + "</td>"));
+		    row.append($("<td>" + rowData.customerSignTaken + "</td>"));
+		    row.append($("<td>" + rowData.executiveName + "</td>"));
+		    row.append($("<td>" + rowData.fieldReport + "</td>"));
+		    row.append($("<td>" + rowData.serviceDescription + "</td>"));
+		    row.append($("<td>" + rowData.calender + "</td>"));
+		    row.append($("<td>" + rowData.longitude + "</td>"));
+		    row.append($("<td>" + rowData.latitude + "</td>"));
+		    row.append($("<td>" + rowData.division + "</td>"));
+		  
+		} 
+		  
+	}
+
 
 
 </script>
 
-	<div class="header">
-		<!-- <a href="#default" class="logo">CompanyLogo</a> -->
+
+
+<style>
+
+#personDataTable td, th {
+
+padding-left: 10px;
+}
+
+#serviceProvider td, th {
+
+    padding-left: 10px;
+}
+
+
+
+
+
+*{
+
+padding: 0;
+margin: 0;
+}
+.active
+{
+background-color: red ! important;
+
+
+}
+</style>
+	
+	<script>
+	
+	$(document).ready(function(){
 		
-		<img src="${pageContext.request.contextPath}/resources/images/infra.png" style="width:100px;"/>
+		
+	$("#serviceid").click(function(){
+
+		$("#serviceid").addClass("active");
+		$("#householdid").removeClass("active");
+		$("#admin").removeClass("active");
+	});
+	$("#householdid").click(function(){
+		
+		$("#householdid").addClass("active");
+		$("#serviceid").removeClass("active");
+		$("#admin").removeClass("active");
+	
+	
+	});
+	
+	$("#admin").click(function(){
+		
+		$("#admin").addClass("active");
+		$("#serviceid").removeClass("active");
+		$("#householdid").removeClass("active");
+		
+	});
+	
+	});
+	
+	
+	
+	</script>
+	
+	
+</head>
+
+ <style>
 
 
-		<div class="header-right">
+ .con{
+ background-color:#F1F3F4;
+ margin-top:-20px;
 
-<div style="padding-right:800px;">
+} 
 
-		<input type="button" value="House Hold" onclick="doFunction();" /> 
-		<input type="button" value="Service Provider" onclick="myFunction();" />
+.con5{
+background-color: #F1F3F4;
+}
+
+@media only screen and (max-width: 600px) {
+ 
+  #adminform{
+  margin-top: 200px;
+ 
+  
+ 
+  }
+
+ 
+ 
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #e7e7e7;
+    display: grid;
+}
+.navbar-default .navbar-nav>li>a {
+
+margin-top: 5px;
+
+
+}
+
+
+
+
+#btnSearchSubmit{
+
+display: flex;
+}
+
+#personDataTableCotainer{
+
+margin-top: 160px;
+}
+
+#serviceProvidermainCotainer{
+
+margin-top: 160px;
+}
+
+}
+
+
+</style>
+
+<body>
+
+<!-- navbar starting -->
+
+
+	<nav class="navbar navbar-default">
+	
+	
+	
+	<div class="navbar-header"> 
+	 
+	  
+	  <img src="${pageContext.request.contextPath}/resources/images/infra.png" style="width:100px;">
+	 <!--     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarNav">    
+            <span class="icon-bar"></span>    
+            <span class="icon-bar"></span>    
+            <span class="icon-bar"></span>    
+        </button> -->
+	   
+	</div>
+
+ 
+ 
+  
+  <div class="collapse navbar-collapse" id="navbarNav"> 
+ 
+    <ul class="nav navbar-nav pull-right"  >
+    
+     <li style="margin-right: 5px">
+        <a href="/MyFmsProject/admin" class="active btn btn-primary" style=" color:white;background-color:#f57b42; font-weight: bold;" id="admin">Admin</a> 
+      </li>
+    
+      <li >
+        <a href="javascript:void(0)" onclick="doFunction();" style=" color:white; background-color:#f57b42; font-weight: bold;" id="householdid" class=" btn btn-primary">House Hold</a> 
+      </li>
+      <li style="margin-left: 5px">
+        <a  href="javascript:void(0)" onclick="myFunction();" style=" color:white;background-color:#f57b42; font-weight: bold;" id="serviceid" class="btn btn-primary">Service Provider</a>
+      </li>
+      
+    
+    </ul>
+  </div> 
+  
+  
+ 
+</nav> 
+
+
+
+<!-- navbar starting end  -->
+
+<!--  seraching form-->
+
+<%-- <c:if test="${adminPage == true }"> --%>
+
+<div  id="adminform">
+<div class="container-fluid con">
+
+<div class="row">
+	<c:if test="${not empty msg }">
+	
+
+  <%-- <h3 class="text-center">${msg}</h3> --%>
+
+	
+	</c:if>
+
+	<div style="margin-top:20px;" class="panel panel-default col-md-6 col-md-offset-3">
+			<div style="background-color:rgb(60, 169, 86);" class="panel-heading">
+				<h3 style="text-align:center; color:white;"><b>Admin Form</b>  </h3>
+			</div>
+			
+			<div class="panel-body">
+			
+		
+				
+					      <form:form  class="form-horizontal" action="modify" modelAttribute="store90" style="margin-left:160px">
+				<div class=" form-group row">
+					<label class="col-md-1 control-label;"></label>
+					
+					<div class="col-md-6">
+						<form:input type="text" path="id" class="form-control" />
+					</div>
+					
+					<div class="col-md-5">
+					</div>
+				</div>
+				
+				
+					<div class="form-group row">
+					<label class="col-md-3 control-label"></label> 
+					
+					<div class="col-md-9">
+						
+				   <input type="submit" class="btn btn-primary " value="Modify" >
+					</div>
+				
+				</div>
+				
+
+			
+
+
+
+			</form:form>
+				
+				
+			
+			
+			</div>	
+	
+
+		
+	
+	
+	
+	</div>
+			
+			
+		
+			
+	</div>
+
+
+	
+
+	
+ 
 
 </div>
 
 
-			
-
-		</div>
-	</div>
+<!--  seraching form end -->
 
 
 
-	<div class="container-fluid con"
-		style="padding-top: 55px; width: 2300px;">
-
-
-		<div class="container-fluid content"
-			style="margin-top: -96px; padding-right: 810px;">
-			<!-- content container open-->
-
-
-
-			<br>
-			<br>
-			<br>
-			<br>
+<div style="padding-top:30px;" class="container-fluid con5">
 
 
 
 
 
-
-			<div class="row r2">
-				<!-- r2 open -->
-
-				<div class="col-12 c2" style="margin: 0px;; padding: 2px" id="start">
-					<!-- c2 open-->
-
-
-
-
-
-
-					<form:form action="processadmin" modelAttribute="store90"
-						name="myform" onsubmit="return MyOwnFunction()">
+					<form:form class="form-horizontal" action="processadmin" modelAttribute="store90" name="myform" onsubmit="return MyOwnFunction()">
 						<form:hidden path="id" />
 
 
 
+<h3 style="padding-bottom:45px;" class="text-center">${msg}</h3> 
 
 
 
 
 
-						<%--  <div>
-        <form:form action="modify" modelAttribute="store90" >
-		 
-		 <label>Id</label>
-		     
-		 	<form:input type="text" path="id" style="width:100px;"/>
-   
-        </form:form>
-        </div --%>
-         
-       
-       
-         
-	 <div class="container">
+			<div class="row">
 
 
+				<label for="dateOfVisit" class="control-label col-md-1">Date
+					of visit</label>
+
+				<div class="form-group col-md-2">
+					<form:input type="date" path="dateOfVisit"
+						placeholder="Date oF Visit" class="form-control" />
+
+				</div>
+
+
+
+
+
+
+
+				<label for="calender" class="control-label col-md-1">Calender</label>
+
+
+				<div class="form-group col-md-2">
+
+					<form:input type="date" path="calender" placeholder="Calender"
+						class="form-control" />
+
+
+				</div>
+
+
+				<label for="time" class="control-label col-md-1">Time</label>
+
+				<div class="form-group col-md-2">
+
+					<form:input type="time" path="time" name="time" placeholder="time"
+						class="form-control" />
+				</div>
+
+
+
+				<label for="location" class="control-label col-md-1">Location</label>
+
+
+				<div class="form-group col-md-2">
+
+					<form:input path="location" name="location" placeholder="Location"
+						class="form-control" />
+
+
+				</div>
+
+
+			</div>
+
+
+
+<br>
+<br>
+
+
+
+			<div class="row">
+
+
+
+				<label for="name" class="control-label col-md-1">Name</label>
+
+
+				<div class="form-group col-md-2">
+
+					<form:input path="name" name="name" id="ownname" placeholder="Name"
+						class="form-control" />
+                 <span id="rname" style="color:red"></span>
+
+				</div>
+
+				<label for="division" class="control-label col-md-1">Division:</label>
+
+
+				<div class="form-group col-md-2">
+					<form:select path="division" class="form-control">
+						<form:option value="Select division" label="Select division" />
+						<form:option value="N" label="N"></form:option>
+						<form:option value="S" label="S"></form:option>
+						<form:option value="E" label="E"></form:option>
+						<form:option value="W" label="W"></form:option>
+					</form:select>
+
+				</div>
+
+
+
+				<label for="fname" class="control-label col-md-1">Mobile</label>
+
+
+				<div class="form-group col-md-2">
+					<form:input path="mobile" name="mobile" id="ownmobile"
+						placeholder="Mobile" class="form-control" />
+                   <span id="rmobile" style="color:red"></span>
+
+				</div>
+
+				<label for="fname" class="control-label col-md-1">Landline
+					Number</label>
+
+				<div class="form-group col-md-2">
+					<form:input path="landlineNumber" name="landlinenumber"
+						id="ownlandline" placeholder="LandlineNumber" class="form-control" />
+                  
+                  	<span id="rlandline" style="color:red"></span>
+				</div>
+
+
+
+
+
+			</div>
+			
+			<br>
+			<br>
+			
+		<%-- 	<!-- sample -->
+			
+			<label for="name" class="control-label col-md-1">Name</label>
+
+
+				<div class="form-group col-md-2">
+
+					<form:input path="name" name="name" id="ownname" placeholder="Name"
+						class="form-control" />
+
+
+				</div>
+			
+			<label for="division" class="control-label col-md-1">Division:</label>
+
+
+				<div class="form-group col-md-2">
+					<form:select path="division" class="form-control"
+						style="width:170px;">
+						<form:option value="Select division" label="Select division" />
+						<form:option value="N" label="N"></form:option>
+						<form:option value="S" label="S"></form:option>
+						<form:option value="E" label="E"></form:option>
+						<form:option value="W" label="W"></form:option>
+					</form:select>
+
+				</div>
+			
+
+
+
+<!-- Sample -->
+
+ --%>
+
+
+			
 
 							<div class="row">
-								<div class="col-1" id="col-25">
-									<label for="dateOfVisit">Date of visit</label>
-								</div>
-								<div class="col-2" id="col-75">
+							
+									<label class="control-label col-md-1">Service Interested</label>
+								
+					
 
+                              <div class="form-group col-md-2">
+									<form:select path="serviceInterested" class="form-control">
 
-									<form:input type="date" path="dateOfVisit"
-										placeholder="Date oF Visit" />
-								</div>
-
-
-
-								<div class="col-1" id="col-25">
-									<label for="calender">Calender</label>
-								</div>
-								<div class="col-2" id="col-75">
-
-
-									<form:input type="date" path="calender" placeholder="Calender" />
-								</div>
-
-
-
-								<div class="col-1" id="col-25">
-									<label for="time">Time</label>
-								</div>
-								<div class="col-2" id="col-75">
-
-
-									<form:input type="time" path="time" name="time"
-										placeholder="time" />
-								</div>
-
-
-
-								<div class="col-1" id="col-25">
-									<label for="location">Location</label>
-								</div>
-								<div class="col-2" id="col-75">
-
-
-									<form:input path="location" name="location"
-										placeholder="Location" />
-								</div>
-
-							</div>
-
-						</div>
-
-
-						<div class="container">
-
-							<div class="row">
-								<div class="col-1" id="col-25">
-									<label for="name">Name</label>
-								</div>
-								<div class="col-2" id="col-75">
-									<!--   <input type="text" name="name" id="name" placeholder="Name"> -->
-
-									<form:input path="name" name="name" id="myname"
-										placeholder="Name" />
-									<span id="qname"></span>
-								</div>
-
-
-
-								<div class="col-1" id="col-25">
-									<label for="division">Division:</label>
-								</div>
-								<div class="col-2" id="col-75">
-
-									<form:select path="division" class="field" style="width:170px;">
-										<form:option value="Select division" label="Select division" />
-										<form:option value="N" label="N"></form:option>
-										<form:option value="S" label="S"></form:option>
-										<form:option value="E" label="E"></form:option>
-										<form:option value="W" label="W"></form:option>
-									</form:select>
-								</div>
-
-
-
-								<div class="col-1" id="col-25">
-									<label for="fname">Mobile</label>
-								</div>
-								<div class="col-2" id="col-75">
-									<!-- <input type="text" name="mobile"  id="mobile" placeholder="Mobile"> -->
-									<form:input path="mobile" name="mobile" id="mymobile"
-										placeholder="Mobile" />
-									<span id="qmobile"></span>
-								</div>
-
-
-
-								<div class="col-1" id="col-25">
-									<label for="fname">Landline Number</label>
-								</div>
-								<div class="col-2" id="col-75">
-									<!--  <input type="text" name="landlinenumber" id="landline" placeholder="Landline Number"> -->
-
-									<form:input path="landlineNumber" name="landlinenumber"
-										id="mylandline" placeholder="LandlineNumber" />
-									<span id="qlandline"></span>
-
-								</div>
-
-							</div>
-
-						</div>
-
-
-
-						<div class="container">
-
-							<div class="row">
-								<div class="col-1" id="col-25">
-									<label>Service Interested</label>
-								</div>
-								<div class="col-2" id="col-75">
-
-
-									<form:select path="serviceInterested" class="field"
-										style="width:170px;">
 										<form:option value="Select Service" label="Select Service" />
 										<form:option value="CCTV" label="CCTV"></form:option>
 										<form:option value="Solar" label="Solar"></form:option>
@@ -732,13 +678,12 @@ function myFunction(){
 
 
 
-								<div class="col-1" id="col-25">
-									<label for="Customer Sign Taken">Customer Sign Taken</label>
-								</div>
-								<div class="col-2" id="col-75">
+								
+									<label class="control-label col-md-1">Customer Sign Taken</label>
+							
+								<div class="form-group col-md-2">
 
-									<form:select path="customerSignTaken" class="field"
-										style="width:170px;">
+									<form:select path="customerSignTaken" class="form-control">
 										<form:option value="Yes" label="Yes"></form:option>
 										<form:option value="No" label="No"></form:option>
 
@@ -748,52 +693,53 @@ function myFunction(){
 
 
 
-								<div class="col-1" id="col-25">
-									<label for="longitude">Longitude</label>
-								</div>
-								<div class="col-2" id="col-75">
-									<!--        <input type="text" name="longitude" placeholder="longitude"> -->
+								
+									<label  class="control-label col-md-1">Longitude</label>
+								
+								<div class="form-group col-md-2">
+	
 
 									<form:input path="longitude" name="longitude"
-										placeholder="Longitude" />
+										placeholder="Longitude"  class="form-control" />
 								</div>
 
 
 
-								<div class="col-1" id="col-25">
-									<label for="latitude">Latitude</label>
-								</div>
-								<div class="col-2" id="col-75">
+								
+									<label class="control-label col-md-1">Latitude</label>
+							
+								<div class="form-group col-md-2">
 
 
 									<form:input path="latitude" name="latitude"
-										placeholder="Latitude" />
+										placeholder="Latitude" class="form-control" />
 								</div>
 
 							</div>
 
-						</div>
+						<br>
+						<br>
 
 
-						<div class="container">
+					
 
 
 							<div class="row">
 
 
-								<div class="col-1" id="col-25">
-									<label class="" for="firmname">Firm Name:</label>
-								</div>
-								<div class="col-2" id="col-75">
-									<form:textarea path="firmName" rows="2" cols="20"></form:textarea>
+							
+									<label class="control-label col-md-1">Firm Name:</label>
+							
+								<div  class="form-group col-md-2">
+									<form:textarea path="firmName" rows="2" cols="20" class="form-control"></form:textarea>
 
 								</div>
 
-								<div class="col-1" id="col-25">
-									<label for="firmregno">FirmRegNo:</label>
-								</div>
-								<div class="col-2" id="col-75">
-									<form:textarea path="firmRegno" rows="2" cols="20"></form:textarea>
+							
+									<label class="control-label col-md-1">FirmRegNo:</label>
+								
+								<div class="form-group col-md-2">
+									<form:textarea path="firmRegno" rows="2" cols="20" class="form-control"></form:textarea>
 
 								</div>
 
@@ -801,13 +747,12 @@ function myFunction(){
 
 
 
-								<div class="col-1" id="col-25">
-									<label for="executivename">Executive Name</label>
-								</div>
-								<div class="col-2" id="col-75">
+							
+									<label  class="control-label col-md-1">Executive Name</label>
+								
+									<div class="form-group col-md-2">
 
-									<form:select path="executiveName" class="field"
-										style="width:170px;">
+									<form:select path="executiveName" class="form-control">
 										<form:option value="Chetan" label="Chetan"></form:option>
 										<form:option value="Ram" label="Ram"></form:option>
 
@@ -815,21 +760,23 @@ function myFunction(){
 
 								</div>
 
-								<div class="col-1" id="col-25">
-									<label for="workexperience">Work Experience:</label>
-								</div>
-								<div class="col-2" id="col-75">
-									<form:textarea path="workExp" rows="2" cols="20"></form:textarea>
+						
+									<label  class="control-label col-md-1">Work Experience:</label>
+								
+								<div class="form-group col-md-2">
+
+									<form:textarea path="workExp" rows="2" cols="29" class="form-control"></form:textarea>
 								</div>
 
 
 							</div>
-						</div>
+					
 
 
 
 
-
+<br>
+<br>
 
 
 
@@ -840,31 +787,18 @@ function myFunction(){
 
 
 
-						<div class="container">
+				
 
 							<div class="row">
 
-								<div class="col-1" id="col-25">
-									<label for="fname">Service Description</label>
-								</div>
-								<div class="col-2" id="col-75">
-
-									<form:textarea path="serviceDescription" rows="2" cols="20"></form:textarea>
-
-								</div>
+								
+									<label class="control-label col-md-1">Service Description</label>
+							
+							<div class="form-group col-md-2">
 
 
+									<form:textarea path="serviceDescription" rows="2" cols="20" class="form-control"></form:textarea>
 
-
-
-
-
-								<div class="col-1" id="col-25">
-									<label for="fname">Field Report</label>
-								</div>
-								<div class="col-2" id="col-75">
-
-									<form:textarea path="fieldReport" rows="2" cols="20"></form:textarea>
 								</div>
 
 
@@ -873,15 +807,31 @@ function myFunction(){
 
 
 
+								
+									<label class="control-label col-md-1">Field Report</label>
+							
+								
+								<div class="form-group col-md-2">
 
-								<div class="col-1" id="col-25">
-									<label for="address">Address</label>
+									<form:textarea path="fieldReport" rows="2" cols="20" class="form-control"></form:textarea>
 								</div>
-								<div class="col-2" id="col-75">
 
-									<form:textarea path="address" id="myaddress" rows="2" cols="56"></form:textarea>
-									<span id="qaddress"></span>
 
+
+
+
+
+
+
+							
+									<label class="control-label col-md-1">Address</label>
+								
+								<div class="form-group col-md-2">
+
+
+									<form:textarea path="address" id="ownaddress" rows="2" cols="88" class="form-control"></form:textarea>
+									<span id="raddress" style="color:red"></span>
+                                 
 								</div>
 
 
@@ -892,23 +842,23 @@ function myFunction(){
 
 							</div>
 
-						</div>
+			<br>
+			<br>
 
 
 						<!-- adding new one -->
 
 
-						<div class="container">
+					
 
 							<div class="row">
-								<div class="col-1" id="col-25">
-									<label>Call Attended</label>
-								</div>
-								<div class="col-2" id="col-75">
+							
+									<label class="control-label col-md-1">Call Attended</label>
+							
+								<div class="form-group col-md-2">
 
 
-									<form:select path="callattended" class="field"
-										style="width:170px;">
+									<form:select path="callattended" class="form-control">
 										<form:option value="Select Service" label="Select Service" />
 										<form:option value="Yes" label="Yes"></form:option>
 										<form:option value="No" label="No"></form:option>
@@ -916,12 +866,12 @@ function myFunction(){
 									</form:select>
 								</div>
 
-								<div class="col-1" id="col-25">
-									<label for="address">Feedback</label>
-								</div>
-								<div class="col-2" id="col-75">
+							
+									<label  class="control-label col-md-1">Feedback</label>
+								
+								<div class="form-group col-md-2">
 
-									<form:textarea path="feedback" rows="2" cols="92"></form:textarea>
+									<form:textarea path="feedback" rows="2" cols="178" class="form-control"></form:textarea>
 
 
 								</div>
@@ -931,91 +881,101 @@ function myFunction(){
 
 							</div>
 
-						</div>
+					
+<div class="row" style="padding-left:140px; padding-bottom:10px;" id="btnSearchSubmit">
+<div class="col-md-4">
+</div>
 
 
-						<!-- adding new one -->
+	<div class="col-md-2">
+	<input type="submit" class="btn btn-primary btn-block"  style="width: 101px;" value="Submit">
+	</div>
+	<div class="col-md-2">
+	<a href="adminsearch" class="btn btn-primary btn-block"  style="width: 101px;"id="search">Search </a>
+	</div>
+	<div class="col-md-4">
+</div>
+</div>
 
-
-
-
-						<div class="container-fluid" style="height: 100px;">
-
-
-							<div class="row rowHeightButton justify-content-center">
-
-								<input type="submit"
-									style="width: 85px; height: 45px; padding-left: 15px; margin: auto; margin-bottom: 40px; margin-right:400px;"
-									value="Submit">
-
-
-
-								<%-- 	<!--  recently added--> 
-									<form:form action="modify" modelAttribute="store90" >
-									<input type="submit" value="Modify" style="color:blue; margin :0px 15px opx,20px; background:#006400; color:white;"> 
-									
-									</form:form> --%>
-
-
-								<div>
-									<a href="adminsearch"type="button" style="padding-right:20px; width:85px; padding-top:10px; padding-left:13px; height:45px; margin-right:160px; background-color:lime-green;" class="">Search</a>
-								</div>
-
-
-
-							</div>
-
-							<div
-								style="padding-left: 510px; color: blue; padding-bottom: 30px;">${message}</div>
-
-
-
-
-
-
-
-
-						</div>
-
-
+				
 
 					</form:form>
+					
+					
+					
+</div>
+</div>
+					
+<%--  </c:if>	 --%> 			
+					
+					
+					
 
-				</div>
-				<!-- c2 -->
+<!-- end of main form -->
 
-			</div>
-			<!-- r2 -->
-		</div>
+
+
+
+
+
+
+
+
+
+
+
 		<!-- container-fluid content -->
 
-		<div style="width: auto; height: auto; color: green; text-align: left">
+ <%--  <c:if test="${adminSearch == true }">	  --%>
+       <c:if test="${adminclickedSearch == true}">
+	
+<div class="container-fluid" id="searchTable">
 
-			<table class="table" style="width: 1000px; font-size: 12px">
-				<thead class="thead-dark">
+
+	<!-- <div class="well">
+		<h1 class="text-center">Admin Detail</h1>
+	
+	</div> -->
+	
+	<!-- newly added -->
+	
+	
+	
+	<div style="margin-top:25px" class="row">
+  	<div class="col-md-12">
+  		<div  class="panel panel-default">
+  				<div class="panel-heading">
+  					<h3  class="text-center"><b>Admin</b></h3>
+  				
+  				</div>
+  				<div class="panel-body" style="overflow-x:scroll; height: 450px;overflow-y:scroll  ">
+  				
+
+			<table class="table table-striped table-responsive">
+				<thead>
 					<tr>
-						<th>Id&nbsp;&nbsp;</th>
-						<th>DateOfVisit&nbsp;&nbsp;</th>
-						<th>Time&nbsp;&nbsp;</th>
-						<th>Location&nbsp;&nbsp;</th>
-						<th>Division&nbsp;&nbsp;</th>
-						<th>Name&nbsp;&nbsp;&nbsp;</th>
-						<th>Address&nbsp;&nbsp;</th>
-						<th>Mobile&nbsp;&nbsp;</th>
-						<th>LandlineNumber&nbsp;&nbsp;</th>
-						<th>Firmname&nbsp;&nbsp;</th>
-						<th>FirmRegno&nbsp;&nbsp;</th>
-						<th>Workexp&nbsp;&nbsp;</th>
-						<th>ServiceInterested&nbsp;&nbsp;</th>
-						<th>CustomerSignTaken&nbsp;&nbsp;</th>
-						<th>ExecutiveName&nbsp;&nbsp;</th>
-						<th>FieldReport&nbsp;&nbsp;</th>
-						<th>ServiceDescription&nbsp;&nbsp;</th>
-						<th>Calender&nbsp;&nbsp;</th>
-						<th>Longitude&nbsp;&nbsp;</th>
-						<th>Latitude&nbsp;&nbsp;</th>
-						<th>CallAttended&nbsp;&nbsp;</th>
-						<th>Feedback&nbsp;&nbsp;</th>
+						<th>Id</th>
+						<th>DateOfVisit</th>
+						<th>Time</th>
+						<th>Location</th>
+						<th>Division</th>
+						<th>Name</th>
+						<th>Address</th>
+						<th>Mobile</th>
+						<th>LandlineNumber</th>
+						<th>Firmname</th>
+						<th>FirmRegno</th>
+						<th>Workexp</th>
+						<th>ServiceInterested</th>
+						<th>CustomerSignTaken</th>
+						<th>ExecutiveName</th>
+						<th>FieldReport</th>
+						<th>ServiceDescription</th>
+						<th>Calender</th>
+						<th>Longitude</th>
+						<th>Latitude</th>
+						<th>CallAttended</th>
+						<th>Feedback</th>
 					</tr>
 
 				</thead>
@@ -1023,7 +983,7 @@ function myFunction(){
 
 
 				<c:forEach var="adminbuyer" items="${store123}">
-					<tr>
+					<tr style="padding-left: 5px">
 						<td>${adminbuyer.id}</td>
 						<td>${adminbuyer.dateOfVisit}</td>
 						<td>${adminbuyer.time}</td>
@@ -1049,118 +1009,375 @@ function myFunction(){
 					</tr>
 
 				</c:forEach>
+				
+				<c:forEach var="adminbuyer" items="${store49}">
+					<tr style="padding-left: 5px">
+						<td>${adminbuyer.id}</td>
+						<td>${adminbuyer.dateOfVisit}</td>
+						<td>${adminbuyer.time}</td>
+						<td>${adminbuyer.location}</td>
+						<td>${adminbuyer.division}</td>
+						<td>${adminbuyer.name}</td>
+						<td>${adminbuyer.address}</td>
+						<td>${adminbuyer.mobile}</td>
+						<td>${adminbuyer.landlineNumber}</td>
+						<td>${adminbuyer.firmName}</td>
+						<td>${adminbuyer.firmRegno}</td>
+						<td>${adminbuyer.workExp}</td>
+						<td>${adminbuyer.serviceInterested}</td>
+						<td>${adminbuyer.customerSignTaken}</td>
+						<td>${adminbuyer.executiveName}</td>
+						<td>${adminbuyer.fieldReport}</td>
+						<td>${adminbuyer.serviceDescription}</td>
+						<td>${adminbuyer.calender}</td>
+						<td>${adminbuyer.longitude}</td>
+						<td>${adminbuyer.latitude}</td>
+						<td>${adminbuyer.callattended}</td>
+						<td>${adminbuyer.feedback}</td>
+					</tr>
+
+				</c:forEach>
+				
 			</table>
+			
+			</div>
+			</div>
+			</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			
+		
+
+</div>
+
+<div class="container-fluid mm" id="DateTable"> 
+<form:form action="myownsearchess" modelAttribute="store90" class="form-horizontal " style="margin-top:20px">
+
+<label style="color:white;"class="control-label col-md-2">From date</label>
+			
+				
+				<div class="form-group col-md-2">
+
+					<form:input path="fromDateOfVisit" type="date" placeholder="From Date"
+						class="form-control" />
+				</div>
+				
+
+				
+				<label style="color:white;" class="control-label col-md-2">To Date</label>
+				
+				
+						
+						<div class="form-group col-md-2">
+                           <form:input path="toDateOfVisit" type="date" placeholder="To Date"
+						   class="form-control" />
+				      </div>
+				
+						
+						
+					
+				
+				<div class="col-md-2" >
+	<input type="submit" class="btn btn-primary " value="Search" style="width: 101px;">
+	</div>
+				
+			
+		</form:form>
 		</div>
 
 
 
 
-
-		<!-- copy from service provider -->
-
-
-		<!-- outer container -->
+ </c:if> 
 
 
 
+	
+<div class="cotainer-fluid" id="personDataTableCotainer" style="display: none;" >
 
-
-		<!-- <div class="container">
- 
- <div class="table-responsive">
- 
- <table class="table table-bordered table-stripped" id="employee_table">
- 
- <tr>
- <th>Date Of Visit</th>
- <th>Time</th>
- <th>Location</th>
- </tr>
- </table>
- 
- 
- </div>
- 
- </div>
- 
- <script>
- $(document).ready(function(){
-	 
-	 $.getJSON("result1.json", function(data){
-		  
-		 var employee_data='';
-		 
-			 employee_data += '<tr>';
-			 employee data += '<td>'+value.dateOfVisit+'</td>';
-			 
-			 
-		 });
-	 
-	 $('rs').append(employee_data);
-		 
-	 });
-	 
- });
- 
- </script> -->
-
-		<div id="result1" style="background-color: blue"></div>
-
-		<div id="result2" style="background-color: green"></div>
-
-
+<!-- <div class="well">
+		<h1 class="text-center">Household Detail</h1>
+	
 	</div>
-	<!-- container-fluid con -->
+
+<table id="personDataTable" class="table table-striped table-responsive " > -->
+
+
+<!-- newly added -->
+
+
+<div style="margin-top:60px;  class="row">
+  	<div  class="col-md-12">
+  		<div class="panel panel-default">
+  				<div class="panel-heading">
+  					<h3  class="text-center"><b>Household</b></h3>
+  				
+  				</div>
+  				<div class="panel-body" style="overflow-x:scroll; height: 450px;overflow-y:scroll  ">
+  				
+  						<table class="table table-striped table-responsive" id="personDataTable">
+				<thead>
+
+    <tr>
+                   <th>DateOfVisit</th>
+					<th>Time</th>
+					<th>Location</th>
+					<th>Name</th>
+					<th>Address</th>
+					
+					
+					<th>Mobile</th>
+					<th>LandlineNumber</th>
+					<th>ServiceIntereste</th>
+					
+					
+					<th>CustomerSignTaken</th>
+					<th>ExecutiveName</th>
+					<th>FieldReport</th>
+					<th>ServiceDescription</th>
+					<th>Calender</th>
+					<th>Longitude</th>
+					<th>Latitude</th>
+					<th>Division</th>
+					
+    </tr>
+    
+   
+</table>
+
+
+
+</div>
+</div>
+</div>
+</div>
+		
+	</div>		
+	
+
+
+
+	
+ <div class="cotainer-fluid" id="serviceProvidermainCotainer" style="display: none;">
+
+<!-- <div class="well">
+		<h1 class="text-center">ServiceProvider Detail</h1>
+	
+	</div>
+
+<table id="serviceProvider" class="table table-striped table-responsive " >  -->
+
+
+<!-- newly added -->
+
+
+ <div style="margin-top:60px; class="row">
+  	<div  class="col-md-12">
+  		<div class="panel panel-default">
+  				<div   class="panel-heading">
+  					<h3 class="text-center"><b>Service Provider</b></h3>
+  				
+  				</div>
+  				<div class="panel-body" style="overflow-x:scroll; height: 450px;  overflow-y:scroll  ">
+  				
+  						<table class="table table-striped table-responsive"  id="serviceProvider">
+				<thead>
+
+
+    <tr>
+                  <th>DateOfVisit</th>
+					<th>Time</th>
+					<th>Location</th>
+					<th>Name</th>
+					<th>Address</th>
+					
+					
+					<th>Mobile</th>
+					<th>LandlineNumber</th>
+				
+					<th>Firm Name</th>
+					<th>Firm RegNo</th>
+					<th>Work Experience</th>
+					<th>Service Interested</th>
+					
+					
+					
+					<th>CustomerSignTaken</th>
+					<th>ExecutiveName</th>
+					<th>FieldReport</th>
+					<th>ServiceDescription</th>
+					<th>Calender</th>
+					<th>Longitude</th>
+					<th>Latitude</th>
+					<th>Division</th>
+					
+					
+    </tr>
+    
+    
+    
+</table>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+	</div>	
+
+ <%-- <div class="container-fluid mm"> 
+<form:form action="myownsearchess" modelAttribute="store90" class="form-horizontal " style="margin-top:20px">
+
+<label style="color:white;"class="control-label col-md-2">From date</label>
+			
+				
+				<div class="form-group col-md-2">
+
+					<form:input path="fromDateOfVisit" type="date" placeholder="From Date"
+						class="form-control" />
+				</div>
+				
+
+				
+				<label style="color:white;" class="control-label col-md-2">To Date</label>
+				
+				
+						
+						<div class="form-group col-md-2">
+                           <form:input path="toDateOfVisit" type="date" placeholder="To Date"
+						   class="form-control" />
+				      </div>
+				
+						
+						
+					
+				
+				<div class="col-md-2" >
+	<input type="submit" class="btn btn-primary " value="Search" style="width: 101px;">
+	</div>
+				
+			
+		</form:form>
+		</div>
+
+ --%>
+
+
 	<script type="text/javascript">
 
 function MyOwnFunction(){
 	
 	
-	var a=document.getElementById('myname').value;
+	var a=document.getElementById('ownname').value;
 	if(a==""||a==null){
 		
-		document.getElementById('qname').innerHTML="**Please Enter name";
+		document.getElementById('rname').innerHTML="**Please Enter name";
 		return false;
 		
-		
-	}
+		}
 	
-	var b=document.getElementById('myaddress').value;
-	if(b==null||b==""){
-		
-		document.getElementById('qaddress').innerHTML="**Please Enter Address";
-		return false;
-	}
+	 /* else{
+		 document.getElementById('rname').innerHTML=" ";
+	 }  */
 	
-	var c=document.getElementById('mymobile').value;
+	var c=document.getElementById('ownmobile').value;
 	if(c==null||c==""){
 		
-		document.getElementById('qmobile').innerHTML="**Please Enter Mobile Number";
+		document.getElementById('rmobile').innerHTML="**Please Enter Mobile Number";
 		return false;
 	}
 	
 	else if(isNaN(c)){
 		
-		document.getElementById('qmobile').innerHTML="**Enter Number Only";
+		document.getElementById('rmobile').innerHTML="**Enter Number Only";
 		return false;
 	}
 	
-	 var d=document.getElementById('mylandline').value;
+	 else{
+		 document.getElementById('rmobile').innerHTML=" ";
+	 } 
+	
+	
+	 var d=document.getElementById('ownlandline').value;
 	 if(d==null||d==""){
 		 
-		 document.getElementById('qlandline').innerHTML="**Please Enter Landline Number";
+		 document.getElementById('rlandline').innerHTML="**Please Enter Landline Number";
 		 return false;
 	 }
 	
 	 else if(isNaN(d)){
 		 
-		 document.getElementById('qlandline').innerHTML="**Please Enter Number Only";
+		 document.getElementById('rlandline').innerHTML="**Please Enter Number Only";
 		 return false;
 	 }
+	 
+	 else{
+		 document.getElementById('rlandline').innerHTML=" ";
+	 } 
+	
+	
+
+	var b=document.getElementById('ownaddress').value;
+	if(b==null||b==""){
+		
+		document.getElementById('raddress').innerHTML="**Please Enter Address";
+		return false;
+	}
+	
+	 else{
+		 document.getElementById('raddress').innerHTML=" ";
+	 } 
+	
+}
+
+</script>
+
+
+<!-- <script>
+
+var s= document.getElementById('householdid');
+var t= document.getElementById('serviceid');
+
+
+function changehover(){
+	
+	
+	
+	
+
+
+t.classList.add("active");
+s.classList.remove("active");
 }
 
 
+function changehover2(){
+s.classList.add("active");
+t.classList.remove("active");
+
+
+
+
+}
+
 </script>
+ -->
+
 
 
 </body>

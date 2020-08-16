@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="admin")
@@ -83,6 +84,13 @@ public class MyAdmin {
 	
 	@Column(name="feedBack")
 	private String feedback;
+	
+	@Transient
+	private String  fromDateOfVisit;
+	
+	@Transient
+	private String toDateOfVisit;
+	
 
 	public int getId() {
 		return id;
@@ -259,6 +267,25 @@ public class MyAdmin {
 
 	public void setFeedback(String feedback) {
 		this.feedback = feedback;
+	}
+	
+	
+	
+
+	public String getFromDateOfVisit() {
+		return fromDateOfVisit;
+	}
+
+	public void setFromDateOfVisit(String fromDateOfVisit) {
+		this.fromDateOfVisit = fromDateOfVisit;
+	}
+
+	public String getToDateOfVisit() {
+		return toDateOfVisit;
+	}
+
+	public void setToDateOfVisit(String toDateOfVisit) {
+		this.toDateOfVisit = toDateOfVisit;
 	}
 
 	@Override

@@ -32,6 +32,8 @@ public interface MyFmsService {
 
 	List<MyAdmin> getAdminDetails();
 
+	List<MyAdmin> myowncollect(Date myownvisit, Date myownvisit1);
+
 	
 
 	

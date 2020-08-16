@@ -95,6 +95,13 @@ public class MyFmsServiceImpl implements MyFmsService {
 		return myfmsdao.getAdminDetails();
 	}
 	
+	@Transactional
+	@Override
+	public List<MyAdmin> myowncollect(Date myownvisit, Date myownvisit1) {
+		
+		return myfmsdao.myowncollect(myownvisit,myownvisit1);
+	}
+	
 	
 	
 	

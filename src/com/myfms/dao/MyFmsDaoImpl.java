@@ -42,7 +42,7 @@ public class MyFmsDaoImpl implements MyFmsDao {
 		// TODO Auto-generated method stub
 		System.out.println("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD");
 		Session session=sessionfactory.getCurrentSession();
-		 Query<MyFms>userquery=session.createQuery("from MyFms",MyFms.class);
+		 Query<MyFms>userquery=session.createQuery("from MyFms order by id desc",MyFms.class);
 		List<MyFms>userlist =userquery.getResultList();
 		System.out.println("LLLLLLLLLLLLLLLLLLL" +userlist.toString());
 		return userlist;
@@ -51,7 +51,7 @@ public class MyFmsDaoImpl implements MyFmsDao {
 	@Override
 	public List<MyService> getMyDetails() {
 	Session session=sessionfactory.getCurrentSession();
-	Query<MyService>userquery=session.createQuery("from MyService");
+	Query<MyService>userquery=session.createQuery("from MyService order by id desc");
 	List<MyService>userlist=userquery.list();
 		return userlist;
 	}
@@ -59,7 +59,7 @@ public class MyFmsDaoImpl implements MyFmsDao {
 	@Override
 	public List<MyFms> Details() {
 		Session session=sessionfactory.getCurrentSession();
-		Query<MyFms>userquery=session.createQuery("from MyFms");
+		Query<MyFms>userquery=session.createQuery("from MyFms  order by id desc");
 		List<MyFms>userlist=userquery.list();
 		System.out.println("Dao Completed");
 		return userlist;
@@ -77,7 +77,7 @@ public class MyFmsDaoImpl implements MyFmsDao {
 	public List<MyService> information() {
 		
 		Session session=sessionfactory.getCurrentSession();
-		Query<MyService>userquery=session.createQuery("from MyService");
+		Query<MyService>userquery=session.createQuery("from MyService order by id desc");
 		List<MyService>userlist=userquery.list();
 		System.out.println("Lit is---------------------------" +userlist);
 		return userlist;
@@ -126,11 +126,24 @@ public class MyFmsDaoImpl implements MyFmsDao {
 	public List<MyAdmin> getAdminDetails() {
 		
 		Session session=sessionfactory.getCurrentSession();
-		Query<MyAdmin> query=session.createQuery("from MyAdmin");
+		Query<MyAdmin> query=session.createQuery("from MyAdmin order by id desc");
 		List<MyAdmin> list=query.list();
 		
 	
 		return list;
+	}
+	
+    @Override
+	public List<MyAdmin> myowncollect(Date myownvisit, Date myownvisit1) {
+	
+		List result= sessionfactory.getCurrentSession()
+				   .createQuery("FROM MyAdmin AS m WHERE m.dateOfVisit BETWEEN :stDate AND :edDate")
+				   .setParameter("stDate", myownvisit.toString())
+				   .setParameter("edDate", myownvisit1.toString())
+				   .list();
+		   
+		   List<MyAdmin> myadmins=result;
+			return myadmins;
 	}
 
 	

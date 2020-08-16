@@ -31,6 +31,8 @@ public interface MyFmsDao {
 
 	List<MyAdmin> getAdminDetails();
 
+	List<MyAdmin> myowncollect(Date myownvisit, Date myownvisit1);
+
 
 
 
